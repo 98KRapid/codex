@@ -1190,7 +1190,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
       end)
   
   
-      Main:AddToggle("Auto Fast Attack", _G.FullyAutoSuperhuman,function(vu)
+      Main:AddToggle("Auto Fast Attack",false,function(vu)
         local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
         local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
         Camera:Stop()
