@@ -1,16 +1,16 @@
 if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
     game.StarterGui:SetCore("SendNotification", {
       Icon = "rbxassetid://9152775759";
-          Title = "PROXO", 
-      Text = "Welcome PROXO!"
+          Title = "Codex", 
+      Text = "Welcome Codex"
   })
   
   wait(1)
   
   game.StarterGui:SetCore("SendNotification", {
       Icon = "rbxassetid://9152775759";
-      Title = "PROXO    ", 
-      Text = "Loading Ui..."
+      Title = "Codex", 
+      Text = "Loading Script"
   })
   
   wait(10)
@@ -106,7 +106,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
           local currenttab = ""
       
           local DoctorShiba = Instance.new("ScreenGui")
-          DoctorShiba.Name = "PROXOGUI"
+          DoctorShiba.Name = "Codex"
           DoctorShiba.Parent = game.CoreGui
           DoctorShiba.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
       
@@ -1074,7 +1074,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
   
   
      
-      local sxhub = library:AddWindow("Proxo | Bloxfruit!",Enum.KeyCode.RightControl)
+      local sxhub = library:AddWindow("Codex | Bloxfruit!",Enum.KeyCode.RightControl)
       
       local Main = sxhub:AddTab("Main","6026568198")
       local stus = sxhub:AddTab("Auto Stats","7040410130")
@@ -5315,15 +5315,15 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
   elseif game.PlaceId == 4520749081 or game.PlaceId == 6381829480 or game.PlaceId == 5931540094 or game.PlaceId == 5931540094 then
     game.StarterGui:SetCore("SendNotification", {
       Icon = "rbxassetid://9152775759";
-      Title = "PROXO", 
-      Text = "Welcome PROXO!"
+      Title = "Codex", 
+      Text = "Welcome to Codex!"
   })
   
   wait(1)
   
   game.StarterGui:SetCore("SendNotification", {
       Icon = "rbxassetid://9152775759";
-      Title = "PROXO", 
+      Title = "Codex", 
       Text = "Loading Ui..."
   })
   
@@ -6710,7 +6710,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
           end)
       end
       --
-      local RenUi = library:AddWindow("Proxo | King Legacy",Enum.KeyCode.RightControl)
+      local RenUi = library:AddWindow("Codex | King Legacy",Enum.KeyCode.RightControl)
       --
       local Main = RenUi:AddTab("Main","6026568198")
       local Stats = RenUi:AddTab("Stats","7040410130")
