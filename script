@@ -1190,32 +1190,30 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
       end)
   
   
+      local autoAttackConnection
+
       Main:AddToggle("Auto Fast Attack", false, function(value)
-        local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-        local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
-        Camera:Stop()
-    
-        local function autoAttack()
-            if value and getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack then
-                getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
-                getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 25
-                getupvalues(CombatFramework)[2]['activeController']:attack()
-            end
-        end
-    
-        local connection
-        if value then
-            connection = game:GetService("RunService").Stepped:Connect(autoAttack)
-        end
-    
-        -- Cleanup connection when the toggle is turned off
-        Main.OnToggleChanged:Connect(function(toggleValue)
-            if not toggleValue and connection then
-                connection:Disconnect()
-            end
-        end)
-    end)
-    
+          local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+          local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
+          Camera:Stop()
+      
+          local function autoAttack()
+              if value and getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack then
+                  getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
+                  getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 25
+                  getupvalues(CombatFramework)[2]['activeController']:attack()
+              end
+          end
+      
+          if autoAttackConnection then
+              autoAttackConnection:Disconnect()
+          end
+      
+          if value then
+              autoAttackConnection = game:GetService("RunService").Stepped:Connect(autoAttack)
+          end
+      end)
+      
 
       Main:AddToggle("Auto SuperHuman", _G.FullyAutoSuperhuman,function(vu)
       AutoFullySuperhuman = vu
