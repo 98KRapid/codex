@@ -1161,8 +1161,12 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
            _G.AutoFarm = vu
           Magnet = vu
       if _G.AutoFarm and SelectToolWeapon == "" then
-          ui:Notification("AutoFarm","SelectWeapon First ",2)
-      else
+        game.StarterGui:SetCore("SendNotification", {
+            Icon = "rbxassetid://16229435676";
+            Title = "Autofarm", 
+            Text = "Please select an weapon first!"
+        })
+    else
           Auto_Farm = vu
           SelectMonster = ""
           if vu == false then
