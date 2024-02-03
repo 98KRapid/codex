@@ -3608,7 +3608,15 @@ getgenv().ToTargets = function(p)
 
 print("Load Script")
 
-local Library = Update:Window("Codex","Ver:RgbTex",Enum.KeyCode.Z);
+local windowName = "Codex"  -- Set the window name variable
+
+local Library = Update:Window(windowName, "Ver:RgbTex", Enum.KeyCode.Z)
+-- Ensure that you update the window name consistently wherever it's referenced in the library
+
+-- Now, if you need to change the window name, update it in one place
+-- For example, if you want to change it to "NewCodex"
+windowName = "NewCodex"
+Library:SetWindowName(windowName)  -- Use a method provided by the library to update the window name
 
 local H = Library:AddTab("Home","6026568198")
 local Main = Library:AddTab("Level Farm","13075651575")
