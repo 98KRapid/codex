@@ -1157,41 +1157,45 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
       
       Main:AddLabel("Menu")
       
-      Main:AddToggle("AutoFarm Level",false,function(vu)
-           _G.AutoFarm = vu
-          Magnet = vu
-      if _G.AutoFarm and SelectToolWeapon == "" then
-        game.StarterGui:SetCore("SendNotification", {
-            Icon = "rbxassetid://16229435676";
-            Title = "Autofarm", 
-            Text = "Please select an weapon first!"
-        })
-    else
-          Auto_Farm = vu
-          SelectMonster = ""
-          if vu == false then
-              wait(1)
-              TP(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
-          end
-      end
-         function UseCode(Text)
-          game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(Text)
-      end
-      UseCode("UPD16")
-      UseCode("2BILLION")
-      UseCode("UPD15")
-      UseCode("FUDD10")
-      UseCode("BIGNEWS")
-      UseCode("THEGREATACE")
-      UseCode("SUB2GAMERROBOT_EXP1")
-      UseCode("StrawHatMaine")
-      UseCode("Sub2OfficialNoobie")
-      UseCode("SUB2NOOBMASTER123")
-      UseCode("Sub2Daigrock")
-      UseCode("Axiore")
-      UseCode("TantaiGaming")
-      UseCode("STRAWHATMAINE") 
-      end)
+      Main:AddToggle("AutoFarm Level", false, function(vu)
+        _G.AutoFarm = vu
+        Magnet = vu
+    
+        if _G.AutoFarm and SelectToolWeapon == "" then
+            game.StarterGui:SetCore("SendNotification", {
+                Icon = "rbxassetid://16229435676";
+                Title = "Autofarm";
+                Text = "Please select a weapon first!";
+            })
+        else
+            Auto_Farm = vu
+            SelectMonster = ""
+    
+            if vu == false then
+                wait(1)
+                TP(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+            end
+        end
+    
+        function UseCode(Text)
+            game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(Text)
+        end
+    
+        UseCode("UPD16")
+        UseCode("2BILLION")
+        UseCode("UPD15")
+        UseCode("FUDD10")
+        UseCode("BIGNEWS")
+        UseCode("THEGREATACE")
+        UseCode("SUB2GAMERROBOT_EXP1")
+        UseCode("StrawHatMaine")
+        UseCode("Sub2OfficialNoobie")
+        UseCode("SUB2NOOBMASTER123")
+        UseCode("Sub2Daigrock")
+        UseCode("Axiore")
+        UseCode("TantaiGaming")
+        UseCode("STRAWHATMAINE")
+    end)    
   
   
       local autoAttackConnection
