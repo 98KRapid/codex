@@ -1232,7 +1232,7 @@ print ("discord.gg/robloxscripts")
       end)
       
 
-    Main:AddToggle("Auto Farm Nearest ",_G.AutoFarmNearest,function(value)
+   Main:AddToggle("Auto Farm Nearest ",_G.AutoFarmNearest,function(value)
    _G.AutoFarmNearest = value
    StopTween(_G.AutoFarmNearest)
  end)
@@ -1244,7 +1244,7 @@ spawn(function()
                 if v.Name and v:FindFirstChild("Humanoid") then
 			        if v.Humanoid.Health > 0 then
 			            repeat wait()
-			              EquipWeapon(Wapon)
+			              SelectWeapon(Wapon)
 			                if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
 			                	local args = {
 				                	[1] = "Buso"
