@@ -1066,9 +1066,6 @@ print ("discord.gg/robloxscripts")
       wait(Distance/Speed)
       Clip = false
   end
-  World1 = false
-  World2 = false
-  World3 = false
   local placeId = game.PlaceId
   if game.PlaceId == 2753915549 then
     World1 = true
@@ -2822,8 +2819,8 @@ spawn(function()
     end)
 
           local sxhub = library:AddWindow("Codex | Bloxfruit!",Enum.KeyCode.RightControl)
-local Main = sxhub:Tab("Main","6026568198")
-local Swords = sxhub:Tab("Wepons","9606626034")
+local Main = sxhub:AddTab("Main","6026568198")
+local Swords = sxhub:AddTab("Wepons","9606626034")
 local Stats = sxhub:AddTab("Stats","7040410130")
 local Combat = sxhub:AddTab("Combats","11446900930")
 local Teleport = sxhub:AddTab("Teleport","7044226690")
