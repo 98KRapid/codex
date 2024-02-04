@@ -4,9 +4,6 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
           Title = "Codex", 
       Text = "Welcome to Codex"
   })
-  
-  wait(3)
-
   print ("Bypassing anticheat")
   wait (2)
   print ("Successfully Bypassed Anticheat)
